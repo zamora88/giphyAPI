@@ -1,0 +1,34 @@
+body {
+
+	background-image: url("Napoleon-Dynamite.jpg");
+	background-repeat: ;
+	background-size: 100%;
+
+}
+
+p{
+
+	font-size: 35px;
+	color: navy;
+	margin-left: 50px;
+}
+
+img {
+
+	margin-left: 50px;
+}
+
+h1{
+
+	text-align: center;
+	color: red;
+	font-size: 60px;
+}
+
+.button {
+	
+	text-align: center;
+		
+
+}
+
