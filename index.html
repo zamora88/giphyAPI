@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>giphy</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>giphy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body> 
-<h1>Sweet Giphs!</h1>
 
-<div class="button">
-<button data-search = "napoleon dynamite" >Napoleon</button>
-<button data-search = "Uncle Rico">Uncle Rico</button>
-<button data-search = "Kip"> Kip </button>
-<button data-search = "Vote for Pedro"> Pedro </button>
-</div>
-
-
-
-
-
- <script type="text/javascript" href="giphyAPI/main.js">
-
- $("button").click(function(){
+<body>
+    <h1>Sweet Giphs!</h1>
+    <div class="button">
+        <button data-search="napoleon dynamite">Napoleon</button>
+        <button data-search="Uncle Rico">Uncle Rico</button>
+        <button data-search="Kip"> Kip </button>
+        <button data-search="Vote for Pedro"> Pedro </button>
+    </div>
+    <script type="text/javascript" href="giphyAPI/main.js">
+    $("button").click(function() {
 
 
- var x = $(this).data("search");
+        var x = $(this).data("search");
 
- console.log(x);
+        console.log(x);
 
- var queryURL = "http://api.giphy.com/v1/gifs/search?q="+x+"&api_key=f2483c6b66014d0a9427e19511d5e9ae&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=f2483c6b66014d0a9427e19511d5e9ae&limit=30";
 
- console.log(queryURL);
+        console.log(queryURL);
 
- $.ajax({url:queryURL,method: "GET"})
+        $.ajax({ url: queryURL, method: "GET" })
 
- .done(function(response){
+            .done(function(response) {
 
- 	console.log(response);
+                console.log(response);
 
- 	for(var i = 0; i < response.data.length; i++){
+                for (var i = 0; i < response.data.length; i++) {
 
- 		$("body").append("<p> Rating:" + response.data[i].rating)
+                    $("body").append("<p> Rating:" + response.data[i].rating)
 
- 		$("body").append("<img src = '" + response.data[i].images.downsized.url + "'>")
+                    $("body").append("<img src = '" + response.data[i].images.downsized.url + "'>")
 
- 	}
-
- 	
- })
+                }
 
 
- });
+            })
 
 
-
-
-
-
-
-
-
-</script>
+    });
+    </script>
 </body>
+
 </html>

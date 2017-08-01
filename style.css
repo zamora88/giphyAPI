@@ -1,34 +1,30 @@
 body {
 
-	background-image: url("Napoleon-Dynamite.jpg");
-	background-repeat: ;
-	background-size: 100%;
-
+    background-image: url("Napoleon-Dynamite.jpg");
+    background-repeat: ;
+    background-size: 100%;
 }
 
-p{
+p {
 
-	font-size: 35px;
-	color: navy;
-	margin-left: 50px;
+    font-size: 35px;
+    color: navy;
+    margin-left: 50px;
 }
 
 img {
 
-	margin-left: 50px;
+    margin-left: 50px;
 }
 
-h1{
+h1 {
 
-	text-align: center;
-	color: red;
-	font-size: 60px;
+    text-align: center;
+    color: red;
+    font-size: 60px;
 }
 
 .button {
-	
-	text-align: center;
-		
 
+    text-align: center;
 }
-
